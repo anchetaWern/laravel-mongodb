@@ -229,6 +229,7 @@ class Builder extends BaseBuilder
 
             // Build the aggregation pipeline.
             $pipeline = [];
+            $pipeline[] = ['allowDiskUse' => true];
             if ($wheres) {
                 $pipeline[] = ['$match' => $wheres];
             }
